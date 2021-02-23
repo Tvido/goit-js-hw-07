@@ -13,5 +13,5 @@ const ingredientsArray = ingredients.map(ingredient => {
   newListRef.textContent = ingredient;
   return newListRef;
 });
-
+ 
 ingredientsList.append(...ingredientsArray);
