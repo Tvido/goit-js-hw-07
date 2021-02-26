@@ -20,14 +20,14 @@
 // }
 
 // #1
-// document.getElementById("validation-input").onblur = function() {
-//   console.log(this.value.length);
-//   if (this.getAttribute('data-length') > this.value.length) { 
-//     this.classList.remove('valid');
-//     this.classList.add('invalid');
+// const validationBtnRef = document.getElementById("validation-input").onblur = function() {
+//   console.log(validationBtnRef.value.length);
+//   if (validationBtnRef.getAttribute('data-length') > validationBtnRef.value.length) { 
+//     validationBtnRef.classList.remove('valid');
+//     validationBtnRef.classList.add('invalid');
 //   } else {
-//     this.classList.remove('invalid');
-//     this.classList.add('valid');
+//     validationBtnRef.classList.remove('invalid');
+//     validationBtnRef.classList.add('valid');
 //   };
 // };
 
@@ -49,15 +49,15 @@
 
 
 // #3
-const inputRef = document.querySelector("#validation-input");
-inputRef.addEventListener("blur", checkValidation);
+const validationBtnRef = document.querySelector("#validation-input");
+validationBtnRef.addEventListener("blur", checkValidation);
 
 function checkValidation() {
-  if (inputRef.value.length === Number(inputRef.dataset.length)) {
-    inputRef.classList.add("valid");
-    inputRef.classList.remove("invalid");
+  if (validationBtnRef.value.length === Number(validationBtnRef.dataset.length)) {
+    validationBtnRef.classList.add("valid");
+    validationBtnRef.classList.remove("invalid");
   } else {
-    inputRef.classList.add("invalid");
-    inputRef.classList.remove("valid");
+    validationBtnRef.classList.add("invalid");
+    validationBtnRef.classList.remove("valid");
     };
 };
