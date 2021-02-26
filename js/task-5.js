@@ -1,6 +1,6 @@
 const refs = {
-  input: document.querySelector('.js-input'),
-  nameLabel: document.querySelector('.js-button'),
+  input: document.querySelector('#name-input'),
+  nameLabel: document.querySelector('#name-output'),
 };
 
 refs.input.addEventListener('input', onInputChange);
