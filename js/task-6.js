@@ -20,24 +20,24 @@
 // }
 
 // #1
-// const validationBtnRef = document.getElementById("validation-input").onblur = function() {
-//   console.log(validationBtnRef.value.length);
-//   if (validationBtnRef.getAttribute('data-length') > validationBtnRef.value.length) { 
-//     validationBtnRef.classList.remove('valid');
-//     validationBtnRef.classList.add('invalid');
+// const validationRef = document.getElementById("validation-input").onblur = function() {
+//   console.log(validationRef.value.length);
+//   if (validationRef.getAttribute('data-length') > validationRef.value.length) { 
+//     validationRef.classList.remove('valid');
+//     validationRef.classList.add('invalid');
 //   } else {
-//     validationBtnRef.classList.remove('invalid');
-//     validationBtnRef.classList.add('valid');
+//     validationRef.classList.remove('invalid');
+//     validationRef.classList.add('valid');
 //   };
 // };
 
 // #2
-// const validationBtnRef = document.querySelector('#validation-input');
-// validationBtnRef.addEventListener('blur', onBlurCheck);
-// const validBtnClassList = validationBtnRef.classList;
+// const validationRef = document.querySelector('#validation-input');
+// validationRef.addEventListener('blur', onBlurCheck);
+// const validBtnClassList = validationRef.classList;
 // function onBlurCheck(event) {
 //   if (
-//     validationBtnRef.value.length === Number(validationBtnRef.dataset.length)
+//     validationRef.value.length === Number(validationRef.dataset.length)
 //   ) {
 //     validBtnClassList.add('valid');
 //     validBtnClassList.remove('invalid');
@@ -49,15 +49,15 @@
 
 
 // #3
-const validationBtnRef = document.querySelector("#validation-input");
-validationBtnRef.addEventListener("blur", checkValidation);
+const validationRef = document.querySelector("#validation-input");
+validationRef.addEventListener("blur", checkValidation);
 
 function checkValidation() {
-  if (validationBtnRef.value.length === Number(validationBtnRef.dataset.length)) {
-    validationBtnRef.classList.add("valid");
-    validationBtnRef.classList.remove("invalid");
+  if (validationRef.value.length === Number(validationRef.dataset.length)) {
+    validationRef.classList.add("valid");
+    validationRef.classList.remove("invalid");
   } else {
-    validationBtnRef.classList.add("invalid");
-    validationBtnRef.classList.remove("valid");
+    validationRef.classList.add("invalid");
+    validationRef.classList.remove("valid");
     };
 };
