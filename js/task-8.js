@@ -61,7 +61,7 @@
 //     destroyBoxes();
 //     let size = 30;
 //     const itemsList = [];
-       
+
 //     for (let i = 0; i < amount; i += 1){
 //         const colorRandom = Math.floor(Math.random()*16777215).toString(16);
 //         const item = document.createElement('div');
@@ -91,15 +91,15 @@ const btnRender = btnDestroy.previousElementSibling;
 const boxesEl = document.querySelector("#boxes");
 const numberEl = btnBox.firstElementChild;
 
-function handleClearOutput(){
+function handleClearOutput() {
   boxesEl.innerHTML = "";
 };
 
-function handleIntroductionNumber(){
-  
-    if(boxesEl.childNodes.length != 0){
-      handleClearOutput();
-      handleIntroductionNumber();
+function handleIntroductionNumber() {
+
+  if (boxesEl.childNodes.length != 0) {
+    handleClearOutput();
+    handleIntroductionNumber();
     return
   }
 
@@ -108,17 +108,17 @@ function handleIntroductionNumber(){
 
   for (let i = 0; i < numberOfInputs; i += 1) {
     const divs = document.createElement("div");
-    
+
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min)) + min;
     }
     const colorNumvber =
       "rgb(" +
-      `${getRandomInt(0, 1000)}` +
+      `${getRandomInt(0, 255)}` +
       "," +
-      `${getRandomInt(0, 1000)}` +
+      `${getRandomInt(0, 255)}` +
       "," +
-      `${getRandomInt(0, 1000)}` +
+      `${getRandomInt(0, 255)}` +
       ")";
     const blockSize = 30 + i * 10;
     divs.style.cssText = `height: ${blockSize}px; width: ${blockSize}px; background-color: ${colorNumvber}`;
@@ -128,7 +128,6 @@ function handleIntroductionNumber(){
   boxesEl.append(...result);
 
 };
-
 
 btnDestroy.addEventListener("click", handleClearOutput);
 btnRender.addEventListener("click", handleIntroductionNumber);
